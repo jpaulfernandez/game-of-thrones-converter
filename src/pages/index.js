@@ -8,12 +8,13 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const [textInput, setTextInput] = useState("");
+  const [isDisable, setDisable] = useState(false);
   const [result, setResult] = useState("The result shall be made known here.");
 
   async function handleSubmit(e) {
 
     e.preventDefault();
-
+    setDisable(true);
     if(textInput == '') {
       setTextInput("I don't know what to say");
     }
@@ -30,6 +31,7 @@ export default function Home() {
       const data = await res.json();
 
       setResult(data.result);
+      setDisable(false);
     } catch(error) {
       console.log(error);
     }
@@ -60,7 +62,8 @@ export default function Home() {
             onChange={(e) => setTextInput(e.target.value)}
           />
           <button
-            className="block w-full px-4 py-2 rounded-lg bg-indigo-700 text-white font-bold hover:bg-indigo-800"
+            disabled={isDisable}
+            className="block w-full px-4 py-2 rounded-lg bg-indigo-700 text-white font-bold hover:bg-indigo-800 disabled:bg-gray-500"
             type="submit"
           >
             Convert

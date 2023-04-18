@@ -1,6 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 
-const apiKey = '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';
+const apiKey = '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';
 
 const config = new Configuration({
     apiKey: apiKey
@@ -35,6 +35,5 @@ function completePrompt(textInput) {
 
     Game of Thrones Style:
     `
-    console.log(prompt);
     return prompt;
 }
