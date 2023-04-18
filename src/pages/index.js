@@ -18,7 +18,6 @@ export default function Home() {
     if(textInput == '') {
       setTextInput("I don't know what to say");
     }
-    console.log(textInput);
     try {
       const res = await fetch("/api/generate", {
         method: "POST",
@@ -51,13 +50,13 @@ export default function Home() {
       <div className="max-w-3xl mx-auto py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Maester&apos;s Manual</h1>
         <p className="text-xl text-center mb-8">
-          Convert any text to Game of Thrones style.
+        Transform your words into the language of the Seven Kingdoms with just one click! Input any sentence, and watch as it's styled to sound like it was spoken in Game of Thrones.
         </p>
         <form className='place-content-center' onSubmit={handleSubmit}>
           <input
             className="block w-full px-4 py-2 mb-4 rounded-lg bg-white border-none shadow"
             type="text"
-            placeholder="Enter your text here"
+            placeholder="Example: Call me your king"
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
           />
