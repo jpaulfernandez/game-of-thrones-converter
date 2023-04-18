@@ -45,13 +45,6 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-      <title>Maester's Manual</title>
-      <link
-        href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
-        rel="stylesheet"
-      />
-    </Head>
     <div className="mx-10 min-h-screen">
       <div className="max-w-3xl mx-auto py-8">
         <h1 className="text-4xl font-bold text-center mb-4">Maester's Manual</h1>
