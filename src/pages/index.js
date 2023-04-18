@@ -47,7 +47,7 @@ export default function Home() {
     <>
     <div className="mx-10 min-h-screen">
       <div className="max-w-3xl mx-auto py-8">
-        <h1 className="text-4xl font-bold text-center mb-4">Maester's Manual</h1>
+        <h1 className="text-4xl font-bold text-center mb-4">Maester&apos;s Manual</h1>
         <p className="text-xl text-center mb-8">
           Convert any text to Game of Thrones style.
         </p>
